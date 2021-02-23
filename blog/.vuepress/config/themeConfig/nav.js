@@ -23,8 +23,33 @@ module.exports = [
     items: [
       { text: '基础', link: '/pages/293b6b/' },
       { text: '进阶', link: '/pages/f0ca41/' },
+      { text: 'TypeScript', link: '/pages/071999/' },
     ],
   },
+  { text: '正则表达式', link: '/pages/f0bce5/' },
+  {
+    text: '框架',
+    link: '/framework/',
+    items: [
+      { text: 'Vue', link: '/pages/dac1b7/' },
+      { text: 'React', link: '/pages/cf1932/' },
+      { text: '微信小程序', link: '/pages/7b96bd/' },
+    ],
+  },
+  { text: '可视化', link: '/pages/7e6a6f/' },
+  { text: '架构与运维', link: '/pages/0f9047/' },
+  { text: 'Node', link: '/' },
+  { text: '更多', link: '/more/' },
+  {
+    text: '索引',
+    link: '/archives/',
+    items: [
+      { text: '分类', link: '/categories/' },
+      { text: '标签', link: '/tags/' },
+      { text: '归档', link: '/archives/' },
+    ],
+  },
+
   // {
   //   text: '前端',
   //   link: '/web/',
