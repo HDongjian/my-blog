@@ -2,44 +2,63 @@
 module.exports = [
   { text: '首页', link: '/' },
   {
-    text: 'HTML',
-    link: '/html/',
+    text: '前端',
+    link: '/web/',
     items: [
-      { text: '标签', link: '/pages/a9c22b/' },
-      { text: '画板', link: '/pages/514c88/' },
-    ],
-  },
-  {
-    text: 'CSS',
-    link: '/css/',
-    items: [
-      { text: '常用CSS', link: '/pages/b732ec/' },
-      { text: 'Less', link: '/pages/969c7e/' },
-    ],
-  },
-  {
-    text: 'JavaScript',
-    link: '/javascript/',
-    items: [
-      { text: '基础', link: '/pages/293b6b/' },
-      { text: '进阶', link: '/pages/f0ca41/' },
-      { text: 'TypeScript', link: '/pages/071999/' },
+      {
+        text: 'HTML',
+        link: '/html/',
+        items: [
+          { text: '标签', link: '/pages/a9c22b/' },
+          { text: '画板', link: '/pages/514c88/' },
+        ],
+      },
+      {
+        text: 'CSS',
+        link: '/css/',
+        items: [
+          { text: '常用CSS', link: '/pages/b732ec/' },
+          { text: 'Less', link: '/pages/969c7e/' },
+        ],
+      },
+      {
+        text: 'JavaScript',
+        link: '/javascript/',
+        items: [
+          { text: '基础', link: '/pages/293b6b/' },
+          { text: '进阶', link: '/pages/f0ca41/' },
+          { text: 'TypeScript', link: '/pages/071999/' },
+        ],
+      },
     ],
   },
   { text: '正则表达式', link: '/pages/f0bce5/' },
   {
     text: '框架',
-    link: '/framework/',
+    link: '/pages/dac1b7/',
     items: [
       { text: 'Vue', link: '/pages/dac1b7/' },
       { text: 'React', link: '/pages/cf1932/' },
       { text: '微信小程序', link: '/pages/7b96bd/' },
     ],
   },
-  { text: '可视化', link: '/pages/7e6a6f/' },
+  {
+    text: '图形化开发',
+    link: '/pages/f7806d/',
+    items: [
+      { text: '数据可视化', link: '/pages/f7806d/' },
+      { text: '三维开发', link: '/pages/7e6a6f/' },
+    ],
+  },
   { text: '架构与运维', link: '/pages/0f9047/' },
-  { text: 'Node', link: '/' },
-  { text: '更多', link: '/more/' },
+  { text: 'Node', link: '/pages/725b67/' },
+  {
+    text: '更多',
+    link: '/pages/bdd3c2/',
+    items: [
+      { text: 'Git', link: '/pages/bdd3c2/' }
+    ],
+  },
   {
     text: '索引',
     link: '/archives/',
