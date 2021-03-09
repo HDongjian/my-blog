@@ -32,7 +32,6 @@ module.exports = [
       },
     ],
   },
-  { text: '正则表达式', link: '/pages/f0bce5/' },
   {
     text: '框架',
     link: '/pages/dac1b7/',
@@ -43,7 +42,7 @@ module.exports = [
     ],
   },
   {
-    text: '图形化开发',
+    text: '图形化',
     link: '/pages/f7806d/',
     items: [
       { text: '数据可视化', link: '/pages/f7806d/' },
@@ -56,7 +55,9 @@ module.exports = [
     text: '更多',
     link: '/pages/bdd3c2/',
     items: [
-      { text: 'Git', link: '/pages/bdd3c2/' }
+      { text: 'Git', link: '/pages/bdd3c2/' },
+      { text: '插件', link: '/pages/8acb61/' },
+      { text: '正则表达式', link: '/pages/f0bce5/' },
     ],
   },
   {
