@@ -34,7 +34,7 @@ module.exports = [
   },
   {
     text: '框架',
-    link: '/pages/dac1b7/',
+    link: '/framework/',
     items: [
       { text: 'Vue', link: '/pages/dac1b7/' },
       { text: 'React', link: '/pages/cf1932/' },
@@ -43,17 +43,32 @@ module.exports = [
   },
   {
     text: '图形化',
-    link: '/pages/f7806d/',
+    link: '/ui/',
     items: [
-      { text: '数据可视化', link: '/pages/f7806d/' },
+      { text: '数据可视化', link: '/pages/f71a16/' },
       { text: '三维开发', link: '/pages/7e6a6f/' },
     ],
   },
-  { text: '架构与运维', link: '/pages/0f9047/' },
-  { text: 'Node', link: '/pages/725b67/' },
+  {
+    text: '架构与运维',
+    link: '/operation/',
+    items: [
+      { text: '优化与测试', link: '/pages/0f9047/' },
+      { text: '部署', link: '/pages/fd3534/' },
+      { text: '服务器', link: '/pages/2273af/' },
+    ],
+  },
+  {
+    text: 'Node',
+    link: '/node/',
+    items: [
+      { text: '基础', link: '/pages/725b67/' },
+      { text: '进阶', link: '/pages/2f0f26/' },
+    ],
+  },
   {
     text: '更多',
-    link: '/pages/bdd3c2/',
+    link: '/more/',
     items: [
       { text: 'Git', link: '/pages/bdd3c2/' },
       { text: '插件', link: '/pages/8acb61/' },

@@ -59,7 +59,7 @@ module.exports = {
     // 页脚信息
     createYear: 2021, // 博客创建年份
     copyrightInfo:
-      'Hao | <a href="https://github.com/HDongjian/my-book" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+      'Hao | <a href="https://github.com/HDongjian/my-book" target="_blank">津ICP备19009907号-1</a>', // 博客版权信息，支持a标签
   }
   // htmlModules // 插入hmtl(广告)模块
 }
