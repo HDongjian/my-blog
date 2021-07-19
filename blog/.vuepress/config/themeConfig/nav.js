@@ -39,6 +39,8 @@ module.exports = [
       { text: 'Vue', link: '/pages/dac1b7/' },
       { text: 'React', link: '/pages/cf1932/' },
       { text: '微信小程序', link: '/pages/7b96bd/' },
+      { text: '移动开发', link: '/pages/b495bb/' },
+      { text: '跨平台开发', link: '/pages/8fd1cf/' },
     ],
   },
   {
