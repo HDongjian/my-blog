@@ -17,7 +17,7 @@ module.exports = [
         text: 'CSS',
         link: '/css/',
         items: [
-          { text: '常用CSS', link: '/pages/b732ec/' },
+          { text: 'CSS基础', link: '/pages/b732ec/' },
           { text: 'Less', link: '/pages/969c7e/' },
         ],
       },
@@ -28,6 +28,7 @@ module.exports = [
           { text: '基础', link: '/pages/293b6b/' },
           { text: '进阶', link: '/pages/f0ca41/' },
           { text: 'TypeScript', link: '/pages/071999/' },
+          { text: '算法', link: '/pages/201fff/' },
         ],
       },
     ],

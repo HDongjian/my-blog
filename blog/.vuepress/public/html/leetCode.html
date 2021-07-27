@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>leetCode</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 两数之和
+  //   输入：nums = [2,7,11,15], target = 9
+  // 输出：[0,1]
+  // 解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+  let nums = [2, 6, 7, 11, 15],
+    target = 9;
+
+  // var twoSum = function (nums, target) {
+  //   for (var i = 0; i < nums.length; i++) {
+  //     for (var j = i + 1; j < nums.length; j++) {
+  //       if (i !== j && nums[i] + nums[j] === target) {
+  //         return [i, j]
+  //       }
+  //     }
+  //   }
+  // };
+  //  var twoSum = function (nums, target) {
+  //   for (var i = 0; i < nums.length; i++) {
+  //     for (var j = i + 1; j < nums.length; j++) {
+  //       if (i !== j && nums[i] + nums[j] === target) {
+  //         return [i, j]
+  //       }
+  //     }
+  //   }
+  // };
+  var twoSum = function (nums, target) {
+    let map = {};
+    let result = []
+    for (var i = 0; i < nums.length; i++) {
+      // if(){}
+      let ele = nums[i]
+      if (Object.hasOwnProperty.call(map, ele)) {
+        result[0] = i
+        result[1] = map[nums[i]]
+        return result
+      }
+      map[[target - ele]] = i
+    }
+  };
+  // console.log(twoSum(nums, target))
+
+  // console.dir(ListNode)
+
+  // 分割线------------------------------------------------------------------------
+
+  function listData(data) {
+    let index = 0
+    let result = new ListNode(data[index]);
+    while (index < data.length - 1) {
+      index++
+      result = new ListNode(data[index], result)
+    }
+    return result
+  }
+
+  let l1 = [2, 4, 3],
+    l2 = [5, 6, 4]
+
+
+  /**
+   * Definition for singly-linked list.
+   * function ListNode(val, next) {
+   *     this.val = (val===undefined ? 0 : val)
+   *     this.next = (next===undefined ? null : next)
+   * }
+   */
+  /**
+   * @param {ListNode} l1
+   * @param {ListNode} l2
+   * @return {ListNode}
+   */
+  l1 = listData(l1)
+  l2 = listData(l2)
+  // console.log(l1)
+
+  function ListNode(val, next) {
+    this.val = (val === undefined ? 0 : val)
+    this.next = (next === undefined ? null : next)
+  }
+  var addTwoNumbers = function (l1, l2) {
+    // 创建临时的链表
+    let resNode = new ListNode(0);
+    // 记录好相关的临时链表信息
+    let res = resNode;
+    // 记录是否进行进位运算
+    let flag = 0;
+    //当l1不为空或l2不为空或不需要进位时
+    while (l1 || l2 || flag) {
+      // 记录其相关的值
+      let val1 = l1 ? l1.val : 0;
+      let val2 = l2 ? l2.val : 0;
+      console.log(val1, val2)
+      let sum = val1 + val2 + flag;
+      //判断是否需要进位
+      flag = sum >= 10 ? 1 : 0;
+      //链表所存储的元素只能为余数
+      sum = sum % 10;
+      //当相关的链表不为空时，则链表一次向下遍历
+      if (l1) {
+        l1 = l1.next;
+      }
+      if (l2) {
+        l2 = l2.next;
+      }
+      //向临时创建的链表追加元素
+      resNode.next = new ListNode(sum);
+      resNode = resNode.next;
+    }
+    return res.next;
+  };
+
+  // console.log(addTwoNumbers(l1, l2))
+
+  // 分割线----------------------------------------------
+
+  var lengthOfLongestSubstring = function (s) {
+    let max = 0,
+      arr = []
+    for (let i = 0; i < s.length; i++) {
+      let index = arr.indexOf(s[i])
+      if (index >= 0) {
+        arr.splice(0, index + 1)
+      }
+      arr.push(s.charAt(i))
+      max = Math.max(arr.length, max)
+    }
+    return max
+  };
+  let s = "abcabcbb"
+  // console.log(lengthOfLongestSubstring(s))
+
+  //---------------------------------------------------------------
+  var nums1 = [1, 3],
+    nums2 = [2]
+  var findMedianSortedArrays = function (nums1, nums2) {
+    let n = nums1.length + nums2.length;
+    let nums = nums1.concat(nums2).sort((a, b) => a - b);
+
+    let result = n % 2 == 0 ?
+      (nums[n / 2] + nums[n / 2 - 1]) / 2 :
+      nums[Math.floor(n / 2)];
+
+    return result;
+  };
+
+  // console.log(findMedianSortedArrays(nums1, nums2))
+
+  var sa = "ac"
+  var longestPalindrome = function (s) {
+    if (s.length < 2) return s;
+
+    let res = '';
+    for (let i = 0; i < s.length; i++) {
+      getCenter(i, i);
+      getCenter(i, i + 1);
+    }
+
+    function getCenter(left, right) {
+      while (left >= 0 && right < s.length && s[left] == s[right]) {
+        left--;
+        right++;
+      }
+
+      if (right - left - 1 > res.length) {
+        res = s.slice(left + 1, right);
+      }
+    }
+    return res
+  };
+  // console.log(longestPalindrome(sa))
+
+  // 分割线 ---------------------------------------------------------------
+
+  let s2 = "PAYPALISHIRING",
+    numRows = 3
+  // 输出："PAHNAPLSIIGYIR"
+
+  var convert = function (s, numRows) {
+    if (s.length <= numRows || numRows === 1) {
+      return s
+    }
+    const arr = new Array(numRows).fill('')
+    let num = 0
+    let plus = true
+    for (let i = 0; i < s.length; i++) {
+      console.log(arr)
+      arr[num] += s[i]
+
+      if (plus) {
+        num += 1
+      } else {
+        num -= 1
+      }
+
+      if (num === 0) {
+        plus = true
+      }
+      if (num === numRows - 1) {
+        plus = false
+      }
+
+    }
+    return arr.join('')
+  };
+  // console.log(convert(s2, numRows))
+
+
+  //  分割线---------------------------------------------------------------------
+  var x = '1534236469'
+  var reverse = function (x) {
+    if (/^(-{0,1})(\d{1,})$/.test(x)) {
+      let c = RegExp.$1;
+      let n = RegExp.$2
+      n = Number(n.split('').reverse().join(''))
+      var limit = Math.pow(2, 31)
+      if (n >= limit) {
+        return 0
+      } else {
+        return c += n
+      }
+    } else {
+      return '0'
+    }
+  }
+  console.log(reverse(x))
+</script>
+
+</html>
