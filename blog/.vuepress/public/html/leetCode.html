@@ -236,7 +236,112 @@
       return '0'
     }
   }
-  console.log(reverse(x))
+  // console.log(reverse(x))
+
+  //分割线---------------------------------------------------------------------------------
+
+  var s3 = "   +0 123"
+
+  // var myAtoi = function (s) {
+  //   var isf = false
+  //   if (s.startsWith('-')) {
+  //     isf = true
+  //   }
+  //   if (s.startsWith('+') || s.startsWith('-')) {
+  //     s = s.substr(1)
+  //   }
+  //   s = s.replaceAll(' ', '')
+  //   let result = '';
+  //   let stop = false
+  //   var limit = Math.pow(2, 31)
+  //   for (let i = 0; i < s.length; i++) {
+  //     const ele = s[i];
+  //     if (!isNaN(ele) && !stop) {
+  //       result += String(ele)
+  //     } else {
+  //       stop = true
+  //     }
+  //   }
+  //   if (!result) {
+  //     return 0
+  //   } else if (isf && result >= limit) {
+  //     return -limit
+  //   } else if (!isf && result > limit) {
+  //     return limit-1
+  //   } else {
+  //     return isf ? -result : result
+  //   }
+  // };
+  var myAtoi = function (s) {
+    let pre = "",
+      num = "",
+      idx = 0
+    while (s[idx] === " ") {
+      idx++;
+    }
+
+    while (s[idx] === "+" || s[idx] === "-") {
+      if (pre) {
+        return 0;
+      }
+      pre = s[idx++];
+    }
+
+    while (s[idx] && s[idx].charCodeAt() >= 48 && s[idx].charCodeAt() <= 57) {
+      num += s[idx++];
+    }
+
+    let res = Number(pre + num) || 0;
+    res = Math.max((-2) ** 31, res);
+    res = Math.min(2 ** 31 - 1, res);
+    return res
+  };
+
+  // console.log(myAtoi(s3))
+
+  // 分割线---------------------------------------------------------------------
+  let x1 = -1232
+  var isPalindrome = function (x) {
+    x = String(x)
+    for (let i = 0; i < x.length / 2; i++) {
+      let ei = x.length - 1 - i
+      if (i < ei && x[i] !== x[ei]) {
+        return false
+      }
+    }
+    return true
+  };
+  // console.log(isPalindrome(x1))
+
+
+  // 分割线--------------------------------------------------------------------------
+  var isMatch3 = function (s, p) {
+    const map = {};
+    this.dp = function (i, j) {
+      const key = `${i}_${j}`;
+      if (map[key]) {
+        return map[key];
+      }
+
+      if (j === p.length) {
+        return i === s.length;
+      }
+
+      let first = i < s.length && [s[i], '.'].includes(p[j]);
+
+      let ans = false;
+      if (j <= p.length - 2 && p[j + 1] === '*') {
+        ans = dp(i, j + 2) || (first && dp(i + 1, j));
+      } else {
+        ans = first && dp(i + 1, j + 1);
+      }
+
+      map[key] = ans
+      return ans;
+    }
+
+    return this.dp(0, 0);
+  };
 </script>
 
 </html>
