@@ -342,6 +342,19 @@
 
     return this.dp(0, 0);
   };
+  // 分割线--------------------------------------------------------------------------
+  let height = [1, 2, 1]
+  var maxArea = function (height) {
+    let L = 0,
+      R = height.length - 1;
+    let res = 0
+    while (L <= R) {
+      let sum = Math.min(height[R], height[L]) * (R - L) //求和
+      res = Math.max(res, sum)
+      height[L] > height[R] ? R-- : L++
+    }
+    return res
+  };
 </script>
 
 </html>
